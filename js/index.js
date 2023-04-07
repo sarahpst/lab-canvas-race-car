@@ -6,7 +6,7 @@ roadImg.src = "../images/road.png";
 let grassWidth = 50;
 const carImg = new Image();
 carImg.src = "../images/car.png";
-let carMouvement = 16;
+let carMouvement = 34;
 carImg.width = 50;
 carImg.height = 100;
 let carPositionX = canvas.width / 2 - 25;
@@ -14,7 +14,7 @@ let carPositionY = canvas.height - 200;
 let obstacleArray = [];
 
 let obstaclesWidth = 100;
-let obstaclesSpace = 200;
+let obstaclesSpace = 280;
 let obstaclesHeight = 30;
 let maxObstaclesPositionX = canvas.width - obstaclesWidth - grassWidth;
 
@@ -34,11 +34,11 @@ window.onload = () => {
     startScreen.style.display = "none";
     canvas.style.display = "block";
     ctx.fillStyle = "Black";
-    initiallValue();
+    obstacleInitiallValue();
     animate();
   }
 
-  const initiallValue = () => {
+  const obstacleInitiallValue = () => {
     obstacleArray = [];
     for (let i = 0; i < 3; i++) {
       obstacleArray.push({
